@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:quotes/core/utils/app_colors.dart';
+import 'package:quotes/features/random_qutoe/domain/entities/quotes.dart';
 
 class QuoteContont extends StatelessWidget {
-  const QuoteContont({Key? key}) : super(key: key);
+  final Quotes quotes;
+  const QuoteContont({Key? key, required this.quotes}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

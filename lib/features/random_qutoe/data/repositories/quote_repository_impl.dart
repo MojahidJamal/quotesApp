@@ -25,7 +25,7 @@ class QuoteRepositoryImpl implements QuoteRepositorty {
         randomQuoteLocalDataSource.cacheQuote(remoteRandomQuote);
         return Right(remoteRandomQuote);
       } on ServerException {
-        return Left(SeverFailure());
+        return Left(ServerFailure());
       }
     } else {
       try {
